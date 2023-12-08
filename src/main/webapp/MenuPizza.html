@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizza Menu</title>
+
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.header {
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+
+		.pizza-item {
+			margin-bottom: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.pizza-checkbox {
+			margin-right: 10px;
+		}
+
+		.pizza-name {
+			font-weight: bold;
+		}
+
+		.pizza-price {
+			font-size: 18px;
+		}
+
+		.order-buttons {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.add-button {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.show-order-button {
+			margin-left: 10px;
+			background-color: #28a745;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+		}
+		.next-button {
+			margin-left: 10px;
+			background-color: #8725d6;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="header">PIZZA</h1>
+
+		<form id="pizza-order-form" method="post" action="http://localhost:8081/Projet/Ajouter">
+			<div class="pizza-item">
+				<input type="checkbox" id="margherita-checkbox" class="pizza-checkbox" name="pizzas" value="margherita" >
+				<label for="margherita-checkbox" class="pizza-name">MARGHERITA</label>
+				<span class="pizza-price">€8,90</span>
+			</div>
+
+			<div class="pizza-item">
+				<input type="checkbox" id="barbecue-checkbox" class="pizza-checkbox" name="pizzas" value="barbecue">
+				<label for="barbecue-checkbox" class="pizza-name">BARBECUE</label>
+				<span class="pizza-price">€12,40</span>
+			</div>
+
+			<div class="pizza-item">
+				<input type="checkbox" id="4-fromages-checkbox" class="pizza-checkbox" name="pizzas" value="fromage">
+				<label for="4-fromages-checkbox" class="pizza-name">4 FROMAGES</label>
+				<span class="pizza-price">€12,90</span>
+			</div>
+
+			<div class="pizza-item">
+				<input type="checkbox" id="thon-checkbox" class="pizza-checkbox" name="pizzas" value="thon">
+				<label for="thon-checkbox" class="pizza-name">THON</label>
+				<span class="pizza-price">€12,90</span>
+			</div>
+			<div class="order-buttons">
+				<input type="submit" class="add-button" name="PizzaButton" value="Ajouter" />
+				<button type="button" class="show-order-button"><a href="Affiche.jsp">Afficher ma commande</a></button>
+				<button type="button" class="next-button"><a href="MenuBoisson.html">Suivant</a></button>
+			</div>
+		</form>
+
+
+	</div>
+</body>
+
+</html>
