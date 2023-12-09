@@ -29,26 +29,30 @@
         </tr>
 		<% int total = 0;
 		Vector<Pizza> pizzas = (Vector<Pizza>)session.getAttribute("pizzas");
+		if(pizzas != null){
 		for (Pizza pizza : pizzas) { total+=pizza.getPrix()*pizza.getQte(); %>
         <tr>
             <td><%= pizza.getNom() %></td>
             <td><%= pizza.getQte() %></td>
             <td><%= pizza.getPrix()*pizza.getQte() %></td>
-            <td><a href="Supprimer.java">Supprimer</a></td>
+            <td><a href="Supprimer?item=<%= pizza.getNom() %>">Supprimer</a></td>
         </tr>
-        <% }
+        <% } }
         Vector<Boisson> boissons = (Vector<Boisson>)session.getAttribute("boissons");
+        if(boissons != null){
 		for (Boisson boisson : boissons) { total+=boisson.getPrix()*boisson.getQte(); %>
         <tr>
             <td><%= boisson.getNom() %></td>
             <td><%= boisson.getQte() %></td>
             <td><%= boisson.getPrix()*boisson.getQte() %></td>
-            <td><a href="Supprimer.java">Supprimer</a></td>
+            <td><a href="Supprimer?item=<%= boisson.getNom() %>">Supprimer</a></td>
         </tr>
-        <% } %>
+        <% } } %>
     </table>
     <p>Total a payer: <%= total %></p>
-    <button type="button">Valider</button>
-    <button type="button">Afficher le menu</button>
+    <% if(boissons != null || pizzas != null) { %>
+    <a href="Formulaire.html"><button type="button">Valider</button></a>
+    <% } %>
+    <a href="MenuPizza.html"><button type="button">Afficher le menu</button></a>
 </body>
 </html>

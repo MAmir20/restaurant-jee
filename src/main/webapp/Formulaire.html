@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		form {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h2>COORDONNEES DE LIVRAISON</h2>
+
+	<form action="Commander" method="post">
+		<label for="nom">Nom:</label><br>
+		<input type="text" id="nom" name="nom" required><br>
+		<label for="prenom">Prenom:</label><br>
+		<input type="text" id="prenom" name="prenom" required><br>
+		<label for="adress">Adresse:</label><br>
+		<input type="text" id="adresse" name="adresse" required><br><br>
+		<input type="submit" value="Valider">
+	</form>
+
+</body>
+
+</html>

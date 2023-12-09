@@ -67,6 +67,7 @@
 			border: none;
 			cursor: pointer;
 		}
+
 		.next-button {
 			margin-left: 10px;
 			background-color: #8725d6;
@@ -84,7 +85,7 @@
 
 		<form id="pizza-order-form" method="post" action="http://localhost:8081/Projet/Ajouter">
 			<div class="pizza-item">
-				<input type="checkbox" id="margherita-checkbox" class="pizza-checkbox" name="boissons" value="boga" >
+				<input type="checkbox" id="margherita-checkbox" class="pizza-checkbox" name="boissons" value="boga">
 				<label for="margherita-checkbox" class="pizza-name">BOGA CIDER</label>
 				<span class="pizza-price">€8,90</span>
 			</div>
@@ -108,8 +109,8 @@
 			</div>
 			<div class="order-buttons">
 				<input type="submit" class="add-button" name="BoissonButton" value="Ajouter Boisson" />
-				<button type="button" class="show-order-button"><a href="Affiche.jsp">Afficher ma commande</a></button>
-				<button type="button" class="next-button"><a href="MenuPizza.html">Precedent</a></button>
+				<a href="Affiche.jsp"><button type="button" class="show-order-button">Afficher ma commande</button></a>
+				<a href="MenuPizza.html"><button type="button" class="next-button">Precedent</button></a>
 			</div>
 		</form>
 
